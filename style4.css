@@ -1,0 +1,187 @@
+/* Ensure the HTML element takes up the full height and width of the viewport */
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Entire body CSS */
+  body {
+    margin: 0;
+    height: 100vh;
+    background: url('images/back.jpg') bottom center no-repeat, 
+                url('images/back.jpg') top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+  }
+  
+  /* Logo container styling */
+  .logo {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Logo image styling */
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Top section styling */
+  .top {
+    background-color: #121111;
+    height: 200px;
+    background-image: url('images/navbackground.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Heading styling in the top section */
+  .top h1 {
+    font-family: "DM Serif Text";
+    color: white;
+    font-size: 150%;
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  /* Styling for the thin white horizontal line */
+  .thin-white-line {
+    border: none;
+    border-top: 1px solid white;
+    margin: 0.1px;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    background-color: #f1ede9;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar a {
+    color: #44841a;
+    font-family: Verdana;
+    text-decoration: none;
+  }
+  
+  /* Styling for navbar buttons */
+  .header-button {
+    background-color: #f1ede9;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+    color: #ff8597;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    border-radius: 50px;
+    color: #44841a;
+    text-decoration: none;
+  }
+  
+  /* Effect for navbar when mouse is hovered */
+  .header-button:hover {
+    background-color: #ad9f9f;
+    color: #ffffff;
+  }
+  
+  /* Main heading with glow and respinsiveness for other browsers with glow effect */
+  h1.glow {
+    color: #ffffff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  /* Container to center video */
+  .video-container {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Styling for iframes for responsiveness */
+  iframe {
+    border: 0;
+    max-width: 100%;
+  }
+  
+  /* Main Content Section */
+  .content {
+    width: 75%;
+    margin: 0 auto;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Container styling to center items */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Box styling inside container */
+  .box {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+    background-color: #ffffff;
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 1000px;
+  }
+  
+  /* Styling for headings */
+  h1 {
+    text-align: center;
+    color: #5b5b5b;
+  }
+  
+  h2 {
+    color: #5b5b5b;
+    padding-left: 20px;
+    font-size: 30px;
+  }
+  
+  /* Styling for paragraphs */
+  p {
+    font-size: 25px;
+    font-family: "Lato";
+    color: #6e6e6e;
+    padding-left: 20px;
+  }
+  
+  /* Styling for items inside my list */
+  li {
+    font-size: 20px;
+    font-family: "Lato";
+    color: #6e6e6e;
+  }
+  
+  /* Glowing text effect for heading one */
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #44841a, 0 0 40px #44841a, 0 0 50px #44841a, 0 0 60px #44841a, 0 0 70px #44841a;
+    }
+    to {
+      text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #9e6400, 0 0 40px #9e6400, 0 0 50px #9e6400, 0 0 60px #9e6400, 0 0 70px #9e6400;
+    }
+  }
+  

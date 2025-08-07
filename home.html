@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stop Ecocide NZ - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="impact.html">Impact</a>
+      <a href="statistics.html">Stats</a>
+      <a href="solutions.html">Solutions</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Protect NZ Forests</h1>
+    <p>Welcome to our site promoting <strong>Kaitiakitanga</strong> and fighting deforestation in Aotearoa.</p>
+
+    <div class="slideshow-container">
+      <img class="slide" src="forest1.jpg" alt="Beautiful NZ Forest" />
+      <img class="slide" src="forest2.jpg" alt="Deforestation in NZ" />
+      <img class="slide" src="forest3.jpg" alt="Community planting trees" />
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MRGS Eco Website | Designed by Yusuf</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0; // Set starting index for slides
+    const slides = document.querySelectorAll('.slide'); // Select all the slides
+    const totalSlides = slides.length;
+
+    // Function to show the current slide and hide the others
+    function showSlide(index) {
+      if (index >= totalSlides) {
+        currentSlide = 0; // Wrap around if next slide is beyond total
+      } else if (index < 0) {
+        currentSlide = totalSlides - 1; // Wrap around if previous slide is before the first
+      } else {
+        currentSlide = index;
+      }
+
+      // Hide all slides, then show the current one
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === currentSlide) ? 'block' : 'none';
+      });
+    }
+
+    // Function for the next slide
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    // Function for the previous slide
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    // Initialize the slideshow by showing the first slide
+    showSlide(currentSlide);
+
+    // Optional: Automatically go to the next slide every 5 seconds
+    setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+  </script>
+</body>
+</html>
